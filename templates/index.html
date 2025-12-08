@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureHope Charity - Home</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(90deg, #004b87, #0072ff);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        /* Main Call-to-Action Container */
+        .container {
+            max-width: 1000px;
+            margin: -30px auto 50px; /* Pull it up slightly for overlap effect */
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        .container h2 {
+            font-size: 2em;
+            color: #004b87;
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            margin: 10px;
+            background: #0072ff;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: #004b87;
+            transform: scale(1.05);
+        }
+
+        /* Causes Section */
+        .causes {
+            max-width: 1100px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .causes h2 {
+            font-size: 2.2em;
+            color: #004b87;
+            margin-bottom: 40px;
+        }
+
+        .cause-card {
+            display: inline-block;
+            width: 280px;
+            margin: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            vertical-align: top;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cause-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .cause-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .cause-card h3 {
+            margin: 15px 0 10px;
+            color: #0072ff;
+            font-size: 1.3em;
+        }
+
+        .cause-card p {
+            padding: 0 15px 20px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Footer spacing */
+        body::after {
+            content: "";
+            display: block;
+            height: 50px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 900px) {
+            .cause-card {
+                width: 45%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .cause-card {
+                width: 90%;
+            }
+        }
+
+        /* Background banner */
+        .banner {
+            width: 100%;
+            height: 350px;
+            background-image: url('https://pce.sandiego.edu/wp-content/uploads/2022/11/private-foundation-vs-public-charity.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;  /* Creates nice parallax effect */
+            margin: 60px 0;
+            border-radius: 10px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>Welcome to PureHope Charity</h1>
+</div>
+
+<!-- Main CTA -->
+<div class="container">
+    <h2>Help Us Make a Difference</h2>
+    <p>Your small contribution brings big hope to those in need. Join us in creating a better world.</p>
+
+    <a href="#" class="btn" id="donateBtn">Donate Now</a>
+    <a href="/login" class="btn">Login</a>
+    <a href="/signup" class="btn">Sign Up</a>
+</div>
+
+<!-- Hidden Causes Section -->
+<div class="causes" id="causesSection" style="display:none;">
+    <h2>Our Causes</h2>
+
+    <div class="cause-card" onclick="window.location.href='/donation'">
+        <img src="https://i.pinimg.com/736x/7e/be/d2/7ebed25e238bfd1dbcabfdae9dd044b1.jpg" alt="Food for Poor">
+        <h3>Food for Poor</h3>
+        <p>Provide nutritious meals to people who need it most.</p>
+    </div>
+
+
+    <div class="cause-card" onclick="window.location.href='/donation'">
+        <img src="https://www.cry.org/wp-content/uploads/access-to-quality-education.png" alt="Education for Children">
+        <h3>Education for Children</h3>
+        <p>Support underprivileged children with quality education.</p>
+    </div>
+
+
+
+    <div class="cause-card" onclick="window.location.href='/donation'">
+        <img src="https://www.chenmed.com/sites/default/files/2024-05/Prescribing%20Positivity%20The%20Physicians%20Role%20in%20Mental%20Health%20Support%20.jpg" alt="Health Support">
+        <h3>Health Support</h3>
+        <p>Provide medical aid and essential health services.</p>
+    </div>
+
+
+
+    <div class="cause-card" onclick="window.location.href='/donation'">
+        <img src="https://assets.thehansindia.com/h-upload/2025/01/24/1517292-bengaluru-to-witness-rare-planetary-parade-in-january-february-where-and-when-to-see-3.webp" alt="Women Empowerment">
+        <h3>Women Empowerment</h3>
+        <p>Support programs to empower women and girls.</p>
+    </div>
+
+
+
+    <div class="cause-card" onclick="window.location.href='/donation'">
+        <img src="https://shahinhealthcare.com/wp-content/uploads/2025/02/Convincing-Elderly-Parents-to-Accept-an-Old-Age-Home-in-India-1024x576.jpg" alt="Old Age Support">
+        <h3>Old Aged People Need</h3>
+        <p>Help elderly people with food, shelter, and care.</p>
+    </div>
+
+
+
+    <div class="cause-card" onclick="window.location.href='/donation'">
+        <img src="https://crowdera-platform.s3.ap-south-1.amazonaws.com/CDRA/campaign-assets/d022f174-27dd-4fde-89a8-1e9f9316248d_original_164465-disaster-management.jpg" alt="Disaster Relief">
+        <h3>Disaster Relief</h3>
+        <p>Provide support to victims of natural disasters.</p>
+    </div>
+   
+
+</div>
+
+<!-- Background Banner Section -->
+<div class="banner"></div>
+
+<!-- Add JS at the end of body -->
+<script>
+    // Show causes when Donate Now is clicked
+    document.getElementById('donateBtn').addEventListener('click', function(e){
+        e.preventDefault(); // prevent page jump
+        document.getElementById('causesSection').style.display = 'block';
+        // Scroll to causes section
+        document.getElementById('causesSection').scrollIntoView({behavior: 'smooth'});
+    });
+
+    // Redirect to donate page when a cause is clicked
+    function goToDonate() {
+        window.location.href = "/donate";
+    }
+</script>
+
+<!-- Footer -->
+<footer style="background: #0c2d57; color: white; padding: 50px 80px; margin-top: 0px !important;">
+
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+
+        <!-- WHO WE ARE -->
+        <div>
+            <h3 style="color: #1ec0c9;">WHO WE ARE</h3>
+            <p>Strategic Plan</p>
+            <p>Governance and leadership</p>
+            <p>History</p>
+            <p>Funding and donors</p>
+        </div>
+
+        <!-- OUR WORK -->
+        <div>
+            <h3 style="color: #1ec0c9;">OUR WORK</h3>
+            <p>Emergency relief</p>
+            <p>Food assistance</p>
+            <p>Humanitarian support and services</p>
+            <p>Supply chain</p>
+        </div>
+
+        <!-- ABOUT HUNGER -->
+        <div>
+            <h3 style="color: #1ec0c9;">ABOUT HUNGER</h3>
+            <p>Ending hunger</p>
+            <p>Conflict and hunger</p>
+            <p>A global food crisis</p>
+            <p>SDGs and Hope</p>
+        </div>
+
+        <!-- MEDIA -->
+        <div>
+            <h3 style="color: #1ec0c9;">MEDIA & RESOURCES</h3>
+            <p>News releases</p>
+            <p>Publications</p>
+            <p>Stories</p>
+            <p>Videos</p>
+        </div>
+
+        <!-- GET INVOLVED -->
+        <div>
+            <h3 style="color: #1ec0c9;">GET INVOLVED</h3>
+            <p>Support us</p>
+            <p>Partner with us</p>
+        </div>
+
+        <!-- WORK WITH US -->
+        <div>
+            <h3 style="color: #1ec0c9;">WORK WITH US</h3>
+            <p>Careers</p>
+            <p>Do business with us</p>
+        </div>
+
+    </div>
+
+    <hr style="border-color: #1ec0c9; margin: 40px 0;">
+
+    <!-- Social + Donate -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        
+        <div>
+            <h3>Follow us</h3>
+            <span style="font-size: 30px; margin-right: 15px;">✖</span>
+            <span style="font-size: 30px; margin-right: 15px;">📘</span>
+            <span style="font-size: 30px; margin-right: 15px;">📸</span>
+            <span style="font-size: 30px; margin-right: 15px;">💼</span>
+            <span style="font-size: 30px; margin-right: 15px;">▶️</span>
+            <span style="font-size: 30px; margin-right: 15px;">🎵</span>
+        </div>
+
+        <div>
+            <h3>Support us</h3>
+            <button onclick="window.location.href='/donate'" style="
+                background: #ff2c2c;
+                color: white;
+                border: none;
+                padding: 12px 25px;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;
+            ">DONATE</button>
+        </div>
+
+    </div>
+
+    <hr style="border-color: #1ec0c9; margin: 40px 0;">
+
+    <p style="text-align: center; margin-top: 20px;">
+        2025 © PureHope Charity | Privacy | Contact | Terms of Use
+    </p>
+
+</footer>
+
+
+
+
+

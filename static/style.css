@@ -1,0 +1,105 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Centered Container for Forms & Content */
+.container, .form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Titles */
+h1, h2 {
+    text-align: center;
+    color: #004b87;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #0072ff;
+}
+
+/* Buttons */
+.btn, .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #004b87;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover, .submit-btn:hover {
+    background-color: #0072ff;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #004b87;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+/* Required field star */
+.required::after {
+    content: " *";
+    color: red;
+}
+
+/* Donation Page Buttons */
+.donate-btn {
+    background-color: #28a745;
+    padding: 15px;
+}
+
+.donate-btn:hover {
+    background-color: #34ce57;
+}
+
+/* Navbar styling (in case you add one later) */
+.navbar {
+    width: 100%;
+    background-color: #004b87;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    color: #ffdd57;
+}

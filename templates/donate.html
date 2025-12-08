@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - PureHope Charity</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 450px;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 { text-align: center; color: #004b87; }
+        .input-field, select {
+            width: 100%;
+            padding: 10px;
+            margin: 12px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #004b87;
+            color: #fff;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover { background: #0072ff; }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2>Make a Donation</h2>
+
+    <form action="/donate" method="post">
+
+        <label class="required">Full Name</label>
+        <input type="text" name="name" class="input-field" required>
+
+        <label class="required">Email Address</label>
+        <input type="email" name="email" class="input-field" required>
+
+        <label class="required">Donation Amount (Rs)</label>
+        <input type="number" name="amount" class="input-field" min="10" required>
+
+        <label class="required">Select Cause</label>
+        <select name="cause" required>
+            <option value="food">Food for Poor</option>
+            <option value="children">Education for Children</option>
+            <option value="health">Health Support</option>
+            <option value="women">Women Empowerment</option>
+            <option value="old_age">Old aged people need</option>
+            <option value="disaster">Disaster relief</option>
+        </select>
+
+        <button type="submit" class="submit-btn">Donate Now</button>
+    </form>
+</div>
+
+</body>
+</html>
